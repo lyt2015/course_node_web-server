@@ -43,21 +43,26 @@ app.get('/', (req, res) => {
   res.render('home.hbs', {
     title: 'Website Alpha',
     message: 'Welcome to My Awesome Website',
-    getYear: 3000
   });
 });
 
 app.get('/ffv', (req, res) => {
   res.render('ffv.hbs', {
     title: 'Final Fantasy V',
-    message: 'Welcome to My Awesome Website',
-    getYear: 3000
+    message: 'Best Game of All Time',
   });
 });
 
 app.get('/error', (req, res) => {
   res.send({
     errorMessage: 'Something went wrong, please understand.'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    title: 'Projects:',
+    message: 'Welecome to My Portfolio'
   });
 });
 
