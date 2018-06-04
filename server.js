@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 4999;
+
 let app = express();
 
 app.set('view engine', 'hbs');
@@ -59,7 +61,6 @@ app.get('/error', (req, res) => {
   });
 });
 
-const port = 4999;
 app.listen(port, () => {
   console.log(`Server is now live at port: ${port}.`);
 });
